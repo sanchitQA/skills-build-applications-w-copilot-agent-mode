@@ -6,7 +6,9 @@ from .models import User, Team, Activity, Leaderboard, Workout
 
 @api_view(['GET', 'POST'])
 def api_root(request, format=None):
-    base_url = 'http://localhost:8000/'
+    # Prefer Codespace URL for API endpoints
+    codespace_url = 'https://redesigned-spork-g6pj46rr9hpp6x-8000.app.github.dev/'
+    base_url = codespace_url if 'github.dev' in request.get_host() else 'http://localhost:8000/'
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
