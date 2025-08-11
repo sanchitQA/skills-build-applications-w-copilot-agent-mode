@@ -87,3 +87,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
+
+# Codespace Django REST API endpoint suffix
+CODESPACE_API_BASE_URL = 'https://redesigned-spork-g6pj46rr9hpp6x-8000.app.github.dev/'
